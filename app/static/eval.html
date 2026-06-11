@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Eval Monitor</title>
+    <link rel="stylesheet" href="/static/eval.css" />
+  </head>
+  <body>
+    <main class="eval-shell">
+      <header class="topbar">
+        <div>
+          <p id="evalLabel">Golden eval</p>
+          <h1>Evaluation cockpit</h1>
+        </div>
+        <nav>
+          <a href="/train">Training</a>
+          <a href="/">Scanner</a>
+        </nav>
+      </header>
+
+      <section class="scoreboard">
+        <article>
+          <span>Progreso</span>
+          <strong id="progress">0 / 1000</strong>
+          <i><b id="progressBar"></b></i>
+        </article>
+        <article>
+          <span>Decision accuracy</span>
+          <strong id="decisionAccuracy">--</strong>
+        </article>
+        <article>
+          <span>False positives</span>
+          <strong id="falsePositiveRate">--</strong>
+        </article>
+        <article>
+          <span>False negatives</span>
+          <strong id="falseNegativeRate">--</strong>
+        </article>
+      </section>
+
+      <section class="flow-panel">
+        <div class="panel-head">
+          <div>
+            <span>Diagrama vivo</span>
+            <h2>Golden set → modelo → decisión → errores</h2>
+          </div>
+          <button id="clearFilter">Ver todo</button>
+        </div>
+        <svg id="flowDiagram" viewBox="0 0 1120 360" role="img" aria-label="Flujo de evaluación"></svg>
+      </section>
+
+      <section class="split">
+        <article class="bias-panel">
+          <div class="panel-head">
+            <div>
+              <span>Sesgo parcial</span>
+              <h2 id="biasTitle">Calculando</h2>
+            </div>
+            <strong id="statusPill">--</strong>
+          </div>
+          <div class="bias-grid">
+            <div>
+              <small>SAFE vistos</small>
+              <b id="safeSeen">0</b>
+            </div>
+            <div>
+              <small>BLOCK vistos</small>
+              <b id="blockSeen">0</b>
+            </div>
+            <div>
+              <small>Predice ALLOW</small>
+              <b id="allowCount">0</b>
+            </div>
+            <div>
+              <small>Predice BLOCK</small>
+              <b id="blockCount">0</b>
+            </div>
+          </div>
+          <p id="biasCopy">Esperando suficientes ejemplos para leer tendencia.</p>
+        </article>
+
+        <article class="matrix-panel">
+          <div class="panel-head">
+            <div>
+              <span>Matriz de confusión</span>
+              <h2 id="matrixTitle">Todas las clases</h2>
+            </div>
+            <small id="matrixHint">Click en una celda para filtrar</small>
+          </div>
+          <div id="confusionMatrix" class="matrix"></div>
+        </article>
+      </section>
+
+      <section class="split bottom">
+        <article class="recent-panel">
+          <div class="panel-head">
+            <div>
+              <span>Predicciones recientes</span>
+              <h2>Últimos ejemplos</h2>
+            </div>
+            <small id="updated">--</small>
+          </div>
+          <div id="recentList" class="recent-list"></div>
+        </article>
+
+        <article class="ops-panel">
+          <div class="panel-head">
+            <div>
+              <span>Runtime</span>
+              <h2>GPU y logs</h2>
+            </div>
+          </div>
+          <div class="ops-grid">
+            <div><small>GPU</small><b id="gpu">--</b></div>
+            <div><small>VRAM</small><b id="vram">--</b></div>
+            <div><small>Temp</small><b id="temp">--</b></div>
+            <div><small>PID</small><b id="pid">--</b></div>
+          </div>
+          <pre id="logs">Esperando logs...</pre>
+        </article>
+      </section>
+    </main>
+
+    <script src="/static/eval.js"></script>
+  </body>
+</html>

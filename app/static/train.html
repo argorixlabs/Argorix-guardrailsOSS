@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guardrail Training Monitor</title>
+    <link rel="stylesheet" href="/static/train.css" />
+  </head>
+  <body>
+    <main class="train-shell">
+      <header class="hero">
+        <div>
+          <p id="runLabel">QLoRA</p>
+          <h1>Training monitor</h1>
+        </div>
+        <a href="/">Scanner</a>
+      </header>
+
+      <section class="status-strip">
+        <div>
+          <span>Etapa</span>
+          <strong id="stage">Conectando</strong>
+        </div>
+        <div>
+          <span>Estado</span>
+          <strong id="status">--</strong>
+        </div>
+        <div>
+          <span>ETA</span>
+          <strong id="eta">--</strong>
+        </div>
+      </section>
+
+      <section class="progress-card">
+        <div class="progress-head">
+          <div>
+            <span id="percent">0%</span>
+            <p id="detail">Leyendo entrenamiento local.</p>
+          </div>
+          <div class="step-box">
+            <small>Step</small>
+            <strong id="step">0 / 4000</strong>
+          </div>
+        </div>
+        <div class="track"><i id="bar"></i></div>
+      </section>
+
+      <section class="grid">
+        <article>
+          <span>Loss</span>
+          <strong id="loss">--</strong>
+        </article>
+        <article>
+          <span>Learning rate</span>
+          <strong id="lr">--</strong>
+        </article>
+        <article>
+          <span>GPU</span>
+          <strong id="gpu">--</strong>
+        </article>
+        <article>
+          <span>VRAM</span>
+          <strong id="vram">--</strong>
+        </article>
+        <article>
+          <span>Temperatura</span>
+          <strong id="temp">--</strong>
+        </article>
+        <article>
+          <span>Salida</span>
+          <strong id="output">--</strong>
+        </article>
+      </section>
+
+      <section class="logs">
+        <div class="logs-head">
+          <h2>Actividad reciente</h2>
+          <span id="updated">--</span>
+        </div>
+        <pre id="logText">Esperando logs...</pre>
+      </section>
+    </main>
+
+    <script src="/static/train.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "output": "data_finetune\\guardrail_es_sample.parquet",
+  "balance": {
+    "enabled": true,
+    "max_train_per_label": 10,
+    "max_eval_per_label": 5,
+    "max_train_per_source_label": 5
+  },
+  "before_balance": {
+    "rows": 8,
+    "splits": {
+      "train": 6,
+      "validation": 2
+    },
+    "primary_labels": {
+      "SAFE": 5,
+      "HATE": 3
+    },
+    "split_primary_labels": {
+      "train:HATE": 2,
+      "train:SAFE": 4,
+      "validation:HATE": 1,
+      "validation:SAFE": 1
+    },
+    "mutation_types": {
+      "translation": 8
+    },
+    "sources": {
+      "Necent/llm-jailbreak-prompt-injection-dataset": 3,
+      "J1N2/mix-prompt-injection-dataset": 3,
+      "huyhoangdinhcong/guardrails-dataset-full": 2
+    },
+    "source_primary_labels": {
+      "J1N2/mix-prompt-injection-dataset:SAFE": 3,
+      "Necent/llm-jailbreak-prompt-injection-dataset:HATE": 3,
+      "huyhoangdinhcong/guardrails-dataset-full:SAFE": 2
+    }
+  },
+  "after_balance": {
+    "rows": 8,
+    "splits": {
+      "train": 6,
+      "validation": 2
+    },
+    "primary_labels": {
+      "SAFE": 5,
+      "HATE": 3
+    },
+    "split_primary_labels": {
+      "train:HATE": 2,
+      "train:SAFE": 4,
+      "validation:HATE": 1,
+      "validation:SAFE": 1
+    },
+    "mutation_types": {
+      "translation": 8
+    },
+    "sources": {
+      "J1N2/mix-prompt-injection-dataset": 3,
+      "Necent/llm-jailbreak-prompt-injection-dataset": 3,
+      "huyhoangdinhcong/guardrails-dataset-full": 2
+    },
+    "source_primary_labels": {
+      "J1N2/mix-prompt-injection-dataset:SAFE": 3,
+      "Necent/llm-jailbreak-prompt-injection-dataset:HATE": 3,
+      "huyhoangdinhcong/guardrails-dataset-full:SAFE": 2
+    }
+  }
+}

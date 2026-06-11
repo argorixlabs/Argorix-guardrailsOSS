@@ -1,0 +1,9 @@
+{
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "adapter_init": "models/guardrail-qwen25-1_5b-qlora-v2",
+  "dataset": "data_finetune/guardrail_es_v3_corrective.parquet",
+  "max_length": 512,
+  "train_rows": 29781,
+  "eval_rows": 2000,
+  "type": "qlora_adapter"
+}

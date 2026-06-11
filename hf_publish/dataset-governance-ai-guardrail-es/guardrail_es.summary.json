@@ -1,0 +1,153 @@
+{
+  "output": "data_finetune\\guardrail_es.parquet",
+  "balance": {
+    "enabled": true,
+    "max_train_per_label": 120000,
+    "max_eval_per_label": 10000,
+    "max_train_per_source_label": 60000
+  },
+  "before_balance": {
+    "rows": 1235617,
+    "splits": {
+      "train": 988345,
+      "test": 123825,
+      "validation": 123447
+    },
+    "primary_labels": {
+      "PROMPT_INJECTION": 348627,
+      "JAILBREAK": 319986,
+      "SAFE": 198604,
+      "HARMFUL": 104118,
+      "VIOLENCE": 102141,
+      "HATE": 94485,
+      "SEXUAL": 40798,
+      "POLITICS": 26858
+    },
+    "split_primary_labels": {
+      "test:HARMFUL": 10489,
+      "test:HATE": 9295,
+      "test:JAILBREAK": 31948,
+      "test:POLITICS": 2700,
+      "test:PROMPT_INJECTION": 35101,
+      "test:SAFE": 20016,
+      "test:SEXUAL": 4022,
+      "test:VIOLENCE": 10254,
+      "train:HARMFUL": 83213,
+      "train:HATE": 75764,
+      "train:JAILBREAK": 256095,
+      "train:POLITICS": 21483,
+      "train:PROMPT_INJECTION": 278773,
+      "train:SAFE": 158583,
+      "train:SEXUAL": 32563,
+      "train:VIOLENCE": 81871,
+      "validation:HARMFUL": 10416,
+      "validation:HATE": 9426,
+      "validation:JAILBREAK": 31943,
+      "validation:POLITICS": 2675,
+      "validation:PROMPT_INJECTION": 34753,
+      "validation:SAFE": 20005,
+      "validation:SEXUAL": 4213,
+      "validation:VIOLENCE": 10016
+    },
+    "mutation_types": {
+      "translation": 782362,
+      "mutation_es_2": 226629,
+      "mutation_es_1": 226626
+    },
+    "sources": {
+      "Necent/llm-jailbreak-prompt-injection-dataset": 763241,
+      "huyhoangdinhcong/guardrails-dataset-full": 270038,
+      "J1N2/mix-prompt-injection-dataset": 202338
+    },
+    "source_primary_labels": {
+      "J1N2/mix-prompt-injection-dataset:PROMPT_INJECTION": 144940,
+      "J1N2/mix-prompt-injection-dataset:SAFE": 57398,
+      "Necent/llm-jailbreak-prompt-injection-dataset:HARMFUL": 79745,
+      "Necent/llm-jailbreak-prompt-injection-dataset:HATE": 32662,
+      "Necent/llm-jailbreak-prompt-injection-dataset:JAILBREAK": 319986,
+      "Necent/llm-jailbreak-prompt-injection-dataset:POLITICS": 1881,
+      "Necent/llm-jailbreak-prompt-injection-dataset:PROMPT_INJECTION": 203687,
+      "Necent/llm-jailbreak-prompt-injection-dataset:SAFE": 72950,
+      "Necent/llm-jailbreak-prompt-injection-dataset:SEXUAL": 13047,
+      "Necent/llm-jailbreak-prompt-injection-dataset:VIOLENCE": 39283,
+      "huyhoangdinhcong/guardrails-dataset-full:HARMFUL": 24373,
+      "huyhoangdinhcong/guardrails-dataset-full:HATE": 61823,
+      "huyhoangdinhcong/guardrails-dataset-full:POLITICS": 24977,
+      "huyhoangdinhcong/guardrails-dataset-full:SAFE": 68256,
+      "huyhoangdinhcong/guardrails-dataset-full:SEXUAL": 27751,
+      "huyhoangdinhcong/guardrails-dataset-full:VIOLENCE": 62858
+    }
+  },
+  "after_balance": {
+    "rows": 723522,
+    "splits": {
+      "train": 591191,
+      "validation": 66314,
+      "test": 66017
+    },
+    "primary_labels": {
+      "SAFE": 140000,
+      "PROMPT_INJECTION": 140000,
+      "VIOLENCE": 101871,
+      "HARMFUL": 99510,
+      "HATE": 94485,
+      "JAILBREAK": 80000,
+      "SEXUAL": 40798,
+      "POLITICS": 26858
+    },
+    "split_primary_labels": {
+      "test:HARMFUL": 10000,
+      "test:HATE": 9295,
+      "test:JAILBREAK": 10000,
+      "test:POLITICS": 2700,
+      "test:PROMPT_INJECTION": 10000,
+      "test:SAFE": 10000,
+      "test:SEXUAL": 4022,
+      "test:VIOLENCE": 10000,
+      "train:HARMFUL": 79510,
+      "train:HATE": 75764,
+      "train:JAILBREAK": 60000,
+      "train:POLITICS": 21483,
+      "train:PROMPT_INJECTION": 120000,
+      "train:SAFE": 120000,
+      "train:SEXUAL": 32563,
+      "train:VIOLENCE": 81871,
+      "validation:HARMFUL": 10000,
+      "validation:HATE": 9426,
+      "validation:JAILBREAK": 10000,
+      "validation:POLITICS": 2675,
+      "validation:PROMPT_INJECTION": 10000,
+      "validation:SAFE": 10000,
+      "validation:SEXUAL": 4213,
+      "validation:VIOLENCE": 10000
+    },
+    "mutation_types": {
+      "translation": 571680,
+      "mutation_es_2": 76126,
+      "mutation_es_1": 75716
+    },
+    "sources": {
+      "Necent/llm-jailbreak-prompt-injection-dataset": 365039,
+      "huyhoangdinhcong/guardrails-dataset-full": 249588,
+      "J1N2/mix-prompt-injection-dataset": 108895
+    },
+    "source_primary_labels": {
+      "J1N2/mix-prompt-injection-dataset:PROMPT_INJECTION": 68433,
+      "J1N2/mix-prompt-injection-dataset:SAFE": 40462,
+      "Necent/llm-jailbreak-prompt-injection-dataset:HARMFUL": 75343,
+      "Necent/llm-jailbreak-prompt-injection-dataset:HATE": 32662,
+      "Necent/llm-jailbreak-prompt-injection-dataset:JAILBREAK": 80000,
+      "Necent/llm-jailbreak-prompt-injection-dataset:POLITICS": 1881,
+      "Necent/llm-jailbreak-prompt-injection-dataset:PROMPT_INJECTION": 71567,
+      "Necent/llm-jailbreak-prompt-injection-dataset:SAFE": 51365,
+      "Necent/llm-jailbreak-prompt-injection-dataset:SEXUAL": 13047,
+      "Necent/llm-jailbreak-prompt-injection-dataset:VIOLENCE": 39174,
+      "huyhoangdinhcong/guardrails-dataset-full:HARMFUL": 24167,
+      "huyhoangdinhcong/guardrails-dataset-full:HATE": 61823,
+      "huyhoangdinhcong/guardrails-dataset-full:POLITICS": 24977,
+      "huyhoangdinhcong/guardrails-dataset-full:SAFE": 48173,
+      "huyhoangdinhcong/guardrails-dataset-full:SEXUAL": 27751,
+      "huyhoangdinhcong/guardrails-dataset-full:VIOLENCE": 62697
+    }
+  }
+}

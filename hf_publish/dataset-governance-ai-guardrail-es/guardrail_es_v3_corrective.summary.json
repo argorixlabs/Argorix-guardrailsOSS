@@ -1,0 +1,32 @@
+{
+  "output": "data_finetune\\guardrail_es_v3_corrective.parquet",
+  "rows": 34766,
+  "support_rows": 16662,
+  "corrective_rows": 18104,
+  "golden_safe_rows": 600,
+  "false_positives_used": 539,
+  "golden_block_rows": 400,
+  "splits": {
+    "train": 29781,
+    "validation": 2507,
+    "test": 2478
+  },
+  "primary_labels": {
+    "SAFE": 22700,
+    "PROMPT_INJECTION": 1788,
+    "JAILBREAK": 1768,
+    "HARMFUL": 1726,
+    "HATE": 1716,
+    "VIOLENCE": 1716,
+    "SEXUAL": 1686,
+    "POLITICS": 1666
+  },
+  "sources": {
+    "golden_v2_hard_negatives": 17700,
+    "huyhoangdinhcong/guardrails-dataset-full": 6289,
+    "Necent/llm-jailbreak-prompt-injection-dataset": 5835,
+    "bogdanminko/Catch_the_prompt_injection_or_jailbreak_or_benign": 3069,
+    "J1N2/mix-prompt-injection-dataset": 1469,
+    "golden_v2_contrastive_attacks": 404
+  }
+}

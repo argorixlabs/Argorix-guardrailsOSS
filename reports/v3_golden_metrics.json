@@ -1,0 +1,31 @@
+{
+  "total": 1000,
+  "decision_correct": 999,
+  "primary_label_correct": 887,
+  "false_positives": 0,
+  "false_negatives": 1,
+  "label_confusion": {
+    "SAFE->SAFE": 600,
+    "PROMPT_INJECTION->PROMPT_INJECTION": 120,
+    "JAILBREAK->JAILBREAK": 66,
+    "JAILBREAK->PROMPT_INJECTION": 28,
+    "JAILBREAK->HARMFUL": 4,
+    "JAILBREAK->HATE": 1,
+    "JAILBREAK->SAFE": 1,
+    "HARMFUL->JAILBREAK": 50,
+    "HARMFUL->HARMFUL": 4,
+    "HARMFUL->VIOLENCE": 1,
+    "HARMFUL->SEXUAL": 2,
+    "HARMFUL->PROMPT_INJECTION": 2,
+    "HARMFUL->HATE": 1,
+    "HATE->HATE": 50,
+    "VIOLENCE->VIOLENCE": 27,
+    "VIOLENCE->JAILBREAK": 20,
+    "VIOLENCE->HATE": 3,
+    "SEXUAL->SEXUAL": 20
+  },
+  "decision_accuracy": 0.999,
+  "primary_label_accuracy": 0.887,
+  "false_positive_rate": 0.0,
+  "false_negative_rate": 0.0025
+}
